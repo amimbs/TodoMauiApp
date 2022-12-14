@@ -24,4 +24,6 @@
 - `Live Visual Tree` - (debugger running) Provided that Hot Reload is enabled, the Live Visual Tree window will display the hierarchy of your app's UI elements regardless of whether the app's UI is built using XAML or C#. However, you will have to disable Just My XAML to display the hierarchy of your app's UI elements for UIs built using C#.
 - `Hot Reload` if you make changes to the C# code, you can save, and hit the `Hot Reload` button next to the debugger to reload with the new code
 - In the `Xaml` files, if you add new elements, for example a Button. If you give it a clicked event, a handler and the subsequent C# code will be generated for you (very cool)
-- MVVM - Model View View Model - an architecture pattern that allows data binding
+- `MVVM` - Model View Viewmodel - an architecture pattern that allows data binding 
+  - is an architectural pattern in computer software that facilitates the separation of the development of the graphical user interface (GUI; the view)—be it via a markup language or GUI code—from the development of the business logic or back-end logic (the model) such that the view is not dependent upon any specific model platform.
+- `URI Shell-Based Navigation` - uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.

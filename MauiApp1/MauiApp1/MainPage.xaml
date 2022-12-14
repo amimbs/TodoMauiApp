@@ -77,7 +77,8 @@
         
         <CollectionView Grid.Row="2"
                         Grid.ColumnSpan="2"
-                        ItemsSource="{Binding Items}">
+                        ItemsSource="{Binding Items}"
+                        SelectionMode="None">
             <!--<CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Apples</x:String>
@@ -94,11 +95,17 @@
                                 <SwipeItem Text="Delete"
                                            BackgroundColor="Red"
                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteCommand}"
-                                           CommandParameter="{Binding .}">
-                                </SwipeItem>
+                                           CommandParameter="{Binding .}"/>
+
                             </SwipeItems>
                         </SwipeView.RightItems>
                         <Grid Padding="0,5">
+                            <Frame>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=TapCommand}"
+                                           CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
                             <Frame>
                                 <Label Text="{Binding . }"
                                        FontSize="24"/>
