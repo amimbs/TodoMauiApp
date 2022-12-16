@@ -18,6 +18,7 @@ namespace MauiApp1.ViewModel
 
         [ObservableProperty]
         string text;
+
         [RelayCommand]
         void Add()
         {
@@ -38,8 +39,8 @@ namespace MauiApp1.ViewModel
                 Items.Remove(s);
             }
         }
-        [RelayCommand]
 
+        [RelayCommand]
         async Task Tap(string s)
         {
             await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");
